@@ -4,5 +4,6 @@
 
 // In the snippet below try to work out what will be printed to the console and then execute the file with Node to see if you were right :)
 
-const firstName = "Toni";
+let firstName = "Toni";
 firstName = "Tony";
+console.log(firstName);

@@ -4,10 +4,10 @@
 
 // In the snippet below try to work out what will be printed to the console and then execute the file with Node to see if you were right :)
 
-let name;
-console.log(name);
+let myName = "Khalifa";
+console.log(myName);
 
-name = "Paul";
-console.log(name);
+myName = "Paul";
+console.log(myName);
 
 // jot your thoughts down here...

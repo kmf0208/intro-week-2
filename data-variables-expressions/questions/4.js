@@ -4,6 +4,6 @@
 
 // In the snippet below try to work out what will be printed to the console and then execute the file with Node to see if you were right :)
 
-const meaningOfLife = 42;
+const meaningOfLife = "Khalifa";
 
 console.log(meaningOfLife.toUpperCase());
