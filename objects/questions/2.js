@@ -1,6 +1,7 @@
 const obj = {};
-
-obj.push("pat");
+obj.name = "pat";
+obj["firstname"] = obj["name"];
+delete obj.name;
 
 console.log(obj);
 

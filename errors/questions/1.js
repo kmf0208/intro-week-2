@@ -1,6 +1,7 @@
 try {
   let name = "Anat";
-  nam;
+  name;
+  console.log(name)
 } catch (error) {
   console.log(error);
 }

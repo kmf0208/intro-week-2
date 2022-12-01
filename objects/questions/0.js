@@ -4,8 +4,8 @@ const phoneBook = {
   shaq: "+4498674321",
 };
 
-const name = "anat";
-const anatPhoneNo = phoneBook.name;
+const nam = "shaq";
+const anatPhoneNo = phoneBook[nam];
 
 console.log(anatPhoneNo);
 

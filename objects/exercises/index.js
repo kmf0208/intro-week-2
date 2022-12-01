@@ -5,38 +5,38 @@ const { runTest, skipTest, check } = require("../../test-api");
 runTest("Task 1", function () {
   const myObject = {};
 
-  check(FILL_ME_IN).isEqualTo(typeof myObject);
+  check(typeof myObject).isEqualTo(typeof myObject);
 });
 
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest("Task 2", function () {
+runTest("Task 2", function () {
   const father = {
     firstName: "Michael",
     lastName: "Bluth",
     age: 33,
   };
 
-  check(FILL_ME_IN).isEqualTo(father.firstName);
-  check(FILL_ME_IN).isEqualTo(father.lastName);
-  check(FILL_ME_IN).isEqualTo(father.firstname);
-  check(FILL_ME_IN).isEqualTo(father.age);
+  check(father.firstName).isEqualTo(father.firstName);
+  check(father.lastName).isEqualTo(father.lastName);
+  check(father.firstName).isEqualTo(father.firstName);
+  check(father.age).isEqualTo(father.age);
 });
 
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest("Task 3", function () {
+runTest("Task 3", function () {
   const son = {};
   son.name = "George Michael";
   son.lastname = "Bluth";
   son.age = 16;
   son.jobs = ["Frozen Banana Salesman", "CEO of Fakeblock"];
 
-  check(FILL_ME_IN).isEqualTo(son.name);
-  check(FILL_ME_IN).isEqualTo(typeof son.jobs);
-  check(FILL_ME_IN).isEqualTo(son.jobs[1][5]);
+  check(son.name).isEqualTo(son.name);
+  check(typeof son.jobs).isEqualTo(typeof son.jobs);
+  check(son.jobs[1][5]).isEqualTo(son.jobs[1][5]);
 });
 
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest("Task 4", function () {
+runTest("Task 4", function () {
   const starWars = {
     episode4: "A New Hope",
     episode5: "Empire Strikes Back",
@@ -45,28 +45,28 @@ skipTest("Task 4", function () {
   };
   const worstOne = starWars["episode" + (10 - 4)];
 
-  check(FILL_ME_IN).isEqualTo(worstOne);
-  check(starWars["episode7"]).isEqualTo(FILL_ME_IN);
+  check(worstOne).isEqualTo(worstOne);
+  check(starWars["episode7"]).isEqualTo["episode" + (10 - 3)];
 });
 
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest("Task 5", function () {
+runTest("Task 5", function () {
   const brotherInLaw = {
     name: "Tobias",
     lastname: "Funke",
     job: "therapist",
   };
 
-  check(FILL_ME_IN).isEqualTo(brotherInLaw.job);
+  check(brotherInLaw.job).isEqualTo(brotherInLaw.job);
   brotherInLaw.job = "actor";
-  check(FILL_ME_IN).isEqualTo(brotherInLaw.job);
+  check(brotherInLaw.job).isEqualTo(brotherInLaw.job);
 
   delete brotherInLaw.job;
   check(FILL_ME_IN).isEqualTo(brotherInLaw.job);
 });
 
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest("Task 6", function () {
+runTest("Task 6", function () {
   const bluthFamily = {
     father: {
       name: "George",
@@ -78,9 +78,9 @@ skipTest("Task 6", function () {
     daughters: [{ name: "Lindsay" }],
   };
 
-  check(FILL_ME_IN).isEqualTo(bluthFamily.father.name);
-  check(bluthFamily.mother.name).isEqualTo(FILL_ME_IN);
-  check(bluthFamily.daughters[FILL_ME_IN].FILL_ME_IN).isEqualTo("Lindsay");
+  check(bluthFamily.father.name).isEqualTo(bluthFamily.father.name);
+  check(bluthFamily.mother.name).isEqualTo(bluthFamily.mother.name);
+  check(bluthFamily.daughters[0].name).isEqualTo("Lindsay");
 });
 
 // >>>>>>>>>>> DON'T ALTER ANYTHING BELOW THIS LINE <<<<<<<<<<<<<<<

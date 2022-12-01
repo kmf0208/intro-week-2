@@ -1,6 +1,7 @@
 try {
   let person = "Foluso";
-  var person = "Alex";
+  person = "Alex";
+  console.log(person);
 } catch (error) {
   console.log(error);
 }

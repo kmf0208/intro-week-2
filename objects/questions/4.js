@@ -1,6 +1,7 @@
-const arr = [];
+let arr = [];
 
-const arr = [1, 2, 3];
+arr = [1, 2, 3];
+console.log(arr)
 
 // What will happen when this file is executed with Node?
 // What is the problem with this code?

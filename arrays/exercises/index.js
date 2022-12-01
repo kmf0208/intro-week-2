@@ -9,7 +9,7 @@ Each of the checks expects the value in the left hand brackets to evaluate to th
 e.g.  check(FILL_ME_IN).isEqualTo(2 + 2) becomes -> check(4).isEqualTo(2 + 2)
 */
 
-runTest("checking multiTypeArray", function () {
+skipTest("checking multiTypeArray", function () {
   const multiTypeArray = ["I am a string", 42, true, [1, 2, 3]];
 
   check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[0]);
