@@ -14,79 +14,79 @@ modulo()
 
 This function should take two arguments a and b, and return the remainder of the division of a / b
 */
-function modulo(a, b){
-  let c = ("a" % "b");
-  if(a % b){
-    return c
-  }else{
-    return 0
-  }
+function modulo(a, b) {
+  return a % b;
 }
+
 runTest("modulo() returns the correct remainder", function () {
   check(modulo(10, 2)).isEqualTo(0);
   check(modulo(119, 10)).isEqualTo(9);
   check(modulo(50, 6)).isEqualTo(2);
 });
 
-/*
-squareRoot()
+function squareRoot(num) {
+  return Math.sqrt(num);
+}
 
-This function should take a single argument and return its square root
-*/
+// This function should take a single argument and return its square root
 
-/*skipTest("squareRoot() returns the square root of a positive integer", function () {
+runTest("squareRoot() returns the square root of a positive integer", function () {
   check(squareRoot(100)).isEqualTo(10);
   check(squareRoot(25)).isEqualTo(5);
   check(squareRoot(121)).isEqualTo(11);
 });
 
-/*
-raiseToPower()
+function raiseToPower(m, n) {
+  return m ** n;
+}
 
-This function should take two arguments, m and n, and return m raised to the power of n
-*/
+// This function should take two arguments, m and n, and return m raised to the power of n
 
-/*skipTest("raiseToPower() raises given number to the given power", function () {
+runTest("raiseToPower() raises given number to the given power", function () {
   check(raiseToPower(10, 3)).isEqualTo(1000);
   check(raiseToPower(25, 2)).isEqualTo(625);
   check(raiseToPower(10, 0)).isEqualTo(1);
 });
 
-/*
-capitaliseFirstLetter()
+function capitaliseFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1) ;
+}
 
-This function should take a string as an argument and return the same string with the first letter capitalised
-*/
-/*skipTest("capitaliseFirstLetter() capitalises the first letter in a string", function () {
+// This function should take a string as an argument and return the same string with the first letter capitalised
+runTest("capitaliseFirstLetter() capitalises the first letter in a string", function () {
   check(capitaliseFirstLetter("bang")).isEqualTo("Bang");
   check(capitaliseFirstLetter("apple")).isEqualTo("Apple");
   check(capitaliseFirstLetter("coding")).isEqualTo("Coding");
 });
 
-/*
-areValuesEqual()
 
-This function should take two arguments and return true if they are *strictly* equal, and false otherwise
+function areValuesEqual(num, num1){
+  return num === num1;
+}
 
-NOTE: you can complete this problem without resorting to if statements!
-*/
+//This function should take two arguments and return true if they are *strictly* equal, and false otherwise
 
-/*skipTest("areValuesEqual() checks if two values are strictly equal", function () {
+//NOTE: you can complete this problem without resorting to if statements!
+
+
+runTest("areValuesEqual() checks if two values are strictly equal", function () {
   check(areValuesEqual(10, 10)).isEqualTo(true);
   check(areValuesEqual("hello", "hello")).isEqualTo(true);
   check(areValuesEqual("good", "bad")).isEqualTo(false);
   check(areValuesEqual("10", 10)).isEqualTo(false);
 });
 
-/*
-isFromThe60s()
 
-This function should take a number as an argument representing a year, and return true if that year is in the 1960s and false otherwise
+function isFromThe60s(num){
+  return num >= 1960 && num <= 1969;
+}
 
-NOTE: you can complete this problem without resorting to if statements!
-*/
+// This function should take a number as an argument representing a year, and return true if that year is in the 1960s and false otherwise
 
-/*skipTest("isFromThe60s() checks if a number is within 1960 to 1969 (inclusive)", function () {
+// NOTE: you can complete this problem without resorting to if statements!
+
+
+runTest("isFromThe60s() checks if a number is within 1960 to 1969 (inclusive)", function () {
   check(isFromThe60s(1962)).isEqualTo(true);
   check(isFromThe60s(1965)).isEqualTo(true);
   check(isFromThe60s(1970)).isEqualTo(false);
@@ -96,28 +96,33 @@ NOTE: you can complete this problem without resorting to if statements!
   check(isFromThe60s(1990)).isEqualTo(false);
 });
 
-/*
-isEvenLength()
 
-This function should take a string as an argument and return true if its length is even, and false otherwise
-*/
+function isEvenLength(str){
+  return str.length % 2 === 0;
+  
+}
 
-/*skipTest("isEvenLength() checks if string has even number of characters", function () {
+// This function should take a string as an argument and return true if its length is even, and false otherwise
+
+
+runTest("isEvenLength() checks if string has even number of characters", function () {
   check(isEvenLength("hello")).isEqualTo(false);
   check(isEvenLength("northcoders")).isEqualTo(false);
   check(isEvenLength("abcd")).isEqualTo(true);
   check(isEvenLength("even")).isEqualTo(true);
 });
 
-/*
-isAbsolutePath()
 
-This function should take a string as an argument representing a file path and return true if it is an absolute path, and false otherwise
+function isAbsolutePath(path){
+  return path.charAt(0) === "/"
+}
 
-HINT: all absolute file paths start with a /
-*/
+// This function should take a string as an argument representing a file path and return true if it is an absolute path, and false otherwise
 
-/*skipTest("isAbsolutePath() checks if a file path is absolute or relative", function () {
+// HINT: all absolute file paths start with a /
+// */
+
+runTest("isAbsolutePath() checks if a file path is absolute or relative", function () {
   check(isAbsolutePath("/Users/mitch")).isEqualTo(true);
   check(isAbsolutePath("/Users/mitch/northcoders/remote_course/remote_precourse_1")).isEqualTo(true);
   check(isAbsolutePath("../composers")).isEqualTo(false);
@@ -181,10 +186,10 @@ extractNumber()
 This function should take a string containing a number wrapped in a pair of round brackets  and return said number
 */
 
-/*skipTest("extractNumber() should return the number buried inside a string", function () {
-  check(extractNumber("lasjdasasj(123)asljdlajk")).isEqualTo(123);
-  check(extractNumber("qwasdaoyer(44687)iuwyeibasdahgsd")).isEqualTo(44687);
-  check(extractNumber("qwasdasdfsyer(19827)iusdfsdfsd")).isEqualTo(19827);
-  check(extractNumber("qwasdasdfsyer(5601)iusdfsdfsd")).isEqualTo(5601);
-  check(extractNumber("qwasdasdfsyer(29)iusdfsdfsd")).isEqualTo(29);
-});
+// skipTest("extractNumber() should return the number buried inside a string", function () {
+//   check(extractNumber("lasjdasasj(123)asljdlajk")).isEqualTo(123);
+//   check(extractNumber("qwasdaoyer(44687)iuwyeibasdahgsd")).isEqualTo(44687);
+//   check(extractNumber("qwasdasdfsyer(19827)iusdfsdfsd")).isEqualTo(19827);
+//   check(extractNumber("qwasdasdfsyer(5601)iusdfsdfsd")).isEqualTo(5601);
+//   check(extractNumber("qwasdasdfsyer(29)iusdfsdfsd")).isEqualTo(29);
+// });
